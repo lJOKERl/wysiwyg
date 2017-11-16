@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Тестовый</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 
 <body>
     <div id="main">
-        <div>
-            <textarea id="area">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi aliquid natus quas eius veniam labore officiis necessitatibus! Quis iure praesentium assumenda a beatae quo voluptates laudantium? Iusto culpa in deserunt ipsa voluptatibus delectus asperiores provident cupiditate enim soluta est voluptas quos quisquam excepturi commodi itaque recusandae omnis earum rem.
-            </textarea>
+        <div>  
+            <div id="editor">
+                <div id="editor_menu">
+                    <button>b</button>
+                    <button>i</button>
+                    <button>u</button>
+                </div>
+                <textarea id="area">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi aliquid natus quas eius veniam labore officiis necessitatibus! Quis iure praesentium assumenda a beatae quo voluptates laudantium? Iusto culpa in deserunt ipsa voluptatibus delectus asperiores provident cupiditate enim soluta est voluptas quos quisquam excepturi commodi itaque recusandae omnis earum rem.
+                </textarea>
+
+                <button id="preview"><i class="fa fa-camera-retro fa-lg"></i> Preview</button>
+            </div>
         </div>
 
         <div id="result"></div>

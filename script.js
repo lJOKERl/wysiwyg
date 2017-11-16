@@ -8,7 +8,7 @@ window.onload = function () {
 			return false; 
 		}
 
-	document.querySelector("#area").onclick = function() {
+	document.querySelector("#preview").onclick = function() {
 		var p = document.createElement("p");
 	    var text = window.getSelection();
 		document.getElementById("result").appendChild(p).innerHTML = text;
