@@ -1,0 +1,68 @@
+body {
+	background: #eee;
+	color: #444;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	font-weight: 300;
+	font-size: 1.2em; 
+}
+
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+label,
+input,
+button,
+select {cursor: pointer}
+
+input[type=text] {
+	cursor: inherit;
+	padding: .5em .75em;
+	font-size: .9em;
+	background: #222;
+	color: #ddd;
+	border: 1px solid #ccc;
+}
+
+
+div#main {
+	
+}
+
+input[type=range] {
+	margin-bottom: 1em;
+	width: 300px;
+}
+
+#main {
+	display: table;
+}
+
+#main > div {
+	display: table-cell;
+	vertical-align: top;
+	width: 50%;
+}
+
+.options {
+	width: 350px;
+	padding: .5em;
+	min-height: 300px;
+	
+}
+
+.view {
+	position: fixed;
+	padding-left: 1em;
+}
+
+.menu {
+	border-bottom: 1px solid #777;
+	margin-bottom: .5em;
+	padding: .5em;
+	margin-left: -.5em;
+	border-radius: 1em;
+}
+
