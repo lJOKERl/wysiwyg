@@ -26,10 +26,7 @@ input[type=text] {
 	border: 1px solid #ccc;
 }
 
-
-div#main {
-	
-}
+div#main {}
 
 input[type=range] {
 	margin-bottom: 1em;
@@ -38,31 +35,23 @@ input[type=range] {
 
 #main {
 	display: table;
+	width: 100%;
 }
 
 #main > div {
 	display: table-cell;
 	vertical-align: top;
+	padding: .5em;
 	width: 50%;
 }
 
-.options {
-	width: 350px;
-	padding: .5em;
-	min-height: 300px;
-	
+#main > div:last-child {
+	border-left: 1px solid #ccc;
 }
 
-.view {
-	position: fixed;
-	padding-left: 1em;
-}
-
-.menu {
-	border-bottom: 1px solid #777;
-	margin-bottom: .5em;
+#area {
+	width: 100%;
 	padding: .5em;
-	margin-left: -.5em;
-	border-radius: 1em;
+	min-height: 200px;
 }
 
