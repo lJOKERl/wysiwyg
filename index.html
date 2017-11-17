@@ -8,31 +8,61 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
 
-<body>
+<body onload="desMod()">
+    <h4 style="text-align: center;">Michael's Fast Editor</h4>
     <div id="main">
+
         <div>  
             <div id="editor">
                 <input type="text" name="" id="header">
                 <div id="editor_menu">
-                    <button id="bold"><i class="fa fa-bold" aria-hidden="true"></i></button>
-                    <button id="italic"><i class="fa fa-italic" aria-hidden="true"></i></button>
-                    <button id="underline"><i class="fa fa-underline" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-link" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-chain-broken" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-align-left" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-align-center" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-align-right" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-list-ul" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-list-ol" aria-hidden="true"></i></button>
+                    <select onchange="execCmdWithArg('formatBlock', this.value)">
+                        <option value="0">Заголовок</option>
+                        <option value="H1">H1</option>
+                        <option value="H2">H2</option>
+                        <option value="H3">H3</option>
+                        <option value="H4">H4</option>
+                        <option value="H5">H5</option>
+                        <option value="H6">H6</option>
+                    </select>
+
+                    <select onchange="execCmdWithArg('fontName', this.value)">
+                        <option value="0">Выбор шрифта</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Courier">Courier</option>
+                        <option value="Georgia">Georgia</option>
+                    </select>
+                    <button onclick="execCmd('bold')"><i class="fa fa-bold" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('italic')"><i class="fa fa-italic" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('underline')"><i class="fa fa-underline" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('strikeThrough')"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
+                    <button onchange="execCmdWithArg('createLink', prompt('Введите адресс ссылки: ', 'http://'))"><i class="fa fa-link" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('unlink')"><i class="fa fa-chain-broken" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('cut')"><i class="fa fa-cut" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('copy')"><i class="fa fa-copy" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('justifyLeft')"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('justifyCenter')"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('justifyRight')"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('justifyFull')"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('undo')"><i class="fa fa-undo" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('redo')"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('subscript')"><i class="fa fa-subscript" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('superscript')"><i class="fa fa-superscript" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('insertUnorderedList')"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('insertOrderedList')"><i class="fa fa-list-ol" aria-hidden="true"></i></button>
                     <button><i class="fa fa-quote-left" aria-hidden="true"></i></button>
                     <button><i class="fa fa-table" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-scissors" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-picture-o" aria-hidden="true"></i></button>
+                    <button onchange="execCmdWithArg('insertImage', prompt('Введите адресс картинки: ', ''))"><i class="fa fa-picture-o" aria-hidden="true"></i></button>
+                    <button onclick="execCmd('selectAll')">Select all</button>
+                    <button onclick="toggleCode()">Select all</button>
                 </div>
                 <iframe name="editorText" id="editorText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi aliquid natus quas eius veniam labore officiis necessitatibus! Quis iure praesentium assumenda a beatae quo voluptates laudantium? Iusto culpa in deserunt ipsa voluptatibus delectus asperiores provident cupiditate enim soluta est voluptas quos quisquam excepturi commodi itaque recusandae omnis earum rem.
                 </iframe>
 
-                <button id="preview"><i class="fa fa-eye" aria-hidden="true"></i> Preview</button>
+                <button onclick="getResult()"><i class="fa fa-eye" aria-hidden="true"></i> Preview</button>
             </div>
         </div>
 
